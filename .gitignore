@@ -1,0 +1,98 @@
+patch_loaded.sh
+system-connections/
+
+# ==========================================
+# Operating System Temporary Files
+# ==========================================
+# macOS (Host Machine)
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.Trashes
+VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Linux (Raspberry Pi Target)
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows (Just in case)
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.lnk
+
+# ==========================================
+# Editors & IDEs
+# ==========================================
+# Neovim / Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+*.un~
+Session.vim
+.netrwhist
+
+# VS Code / VSCodium
+.vscode/*
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.history/
+*.code-workspace
+
+# ==========================================
+# AI Agents & Local Frameworks (Antigravity)
+# ==========================================
+.antigravity/tmp/
+.antigravity/*.tmp
+agent_workspace_backup/
+*.log
+
+# ==========================================
+# Language-Specific Builds & Environments
+# ==========================================
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+ENV/
+env/
+
+# Rust
+/target/
+**/*.rs.bk
+Cargo.lock
+
+# C / C++ (Common for Pi/Hardware)
+*.o
+*.obj
+*.a
+*.la
+*.lo
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
