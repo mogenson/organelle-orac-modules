@@ -1,0 +1,418 @@
+-- lib/sequencer.lua
+local Sequencer = {}
+Sequencer.__index = Sequencer
+
+function Sequencer.new(config)
+    local self = setmetatable({}, Sequencer)
+
+    config = config or {}
+    self.tpb = config.tpb or 180
+    self.max_events = config.max_events or 1000
+    self.output = config.output or function() end
+
+    self.state = "STOPPED"
+    self.events = {}
+    self.recording_start_tick = 0
+    self.playback_tick = 0
+    self.loop_length = 0
+    self.event_index = 1
+    self.recording_held_notes = {}
+    self.playback_held_notes = {}
+    self.internal_tick = config.tc or 0  -- Sync with global tick on init
+    self.sync_pending = false  -- Waiting for beat boundary
+
+    -- Transition support (for seamless preset switching)
+    self.pending_events = nil
+    self.pending_loop_length = nil
+    self.transition_pending = false
+
+    return self
+end
+
+-- State transitions
+function Sequencer:arm()
+    self:clear()
+    self.state = "ARMED"
+    return true
+end
+
+function Sequencer:startRecording()
+    print("Recording started")
+    self.state = "RECORDING"
+
+    -- Snap to nearest beat boundary
+    local ticks_into_beat = self.internal_tick % self.tpb
+    local position_in_beat = ticks_into_beat / self.tpb
+
+    if position_in_beat >= 0.9 then
+        -- Close to next beat, snap forward
+        self.recording_start_tick = (math.floor(self.internal_tick / self.tpb) + 1) * self.tpb
+    else
+        -- Snap to previous beat
+        self.recording_start_tick = math.floor(self.internal_tick / self.tpb) * self.tpb
+    end
+
+    self.events = {}
+    self.recording_held_notes = {}
+end
+
+function Sequencer:endRecording()
+    if self.state ~= "RECORDING" then return end
+
+    local current_beat = (self.internal_tick - self.recording_start_tick) / self.tpb
+
+    self.loop_length = math.floor(current_beat + 0.5)  -- Round to nearest integer beat
+    if self.loop_length == 0 then self.loop_length = 1 end -- make sure it is at least 1 beat
+
+    -- Add note-offs for held notes
+    for note, _ in pairs(self.recording_held_notes) do
+        table.insert(self.events, {
+            time = self.loop_length,
+            type = "note",
+            note = note,
+            velocity = 0
+        })
+    end
+
+    self.recording_held_notes = {}
+
+    -- Clamp any events past loop_length (iterate from end since they'll be at the end)
+    for i = #self.events, 1, -1 do
+        if self.events[i].time > self.loop_length then
+            self.events[i].time = self.loop_length
+        else
+            break
+        end
+    end
+
+    self:stop()
+    self:printInfo()
+end
+
+function Sequencer:play()
+    if #self.events == 0 then return false end
+    self.state = "PLAYING"
+    self.playback_tick = 0
+    self.event_index = 1
+    self.playback_held_notes = {}
+    self.sync_pending = false
+    return true
+end
+
+function Sequencer:playSync()
+    if #self.events == 0 then return false end
+    -- Mark that we're waiting for the next beat
+    self.sync_pending = true
+    return true
+end
+
+function Sequencer:stop()
+    -- Send note-offs for any held notes (count handles overlapping notes)
+    for note, count in pairs(self.playback_held_notes) do
+        for i = 1, count do
+            self.output("note", note, 0)
+        end
+    end
+    self.playback_held_notes = {}
+    self.state = "STOPPED"
+    self.sync_pending = false
+end
+
+function Sequencer:toggle()
+    if self.state == "PLAYING" then
+        self:stop()
+    elseif self.state == "STOPPED" and #self.events > 0 then
+        self:play()
+    end
+end
+
+-- Core event recording with max check
+function Sequencer:recordEvent(event)
+    if self.state == "RECORDING" then
+        -- Check limit before recording
+        if #self.events >= self.max_events then
+            print("Sequence reached (" .. self.max_events .. " events), not recording")
+            return false
+        end
+        
+        -- Add timestamp (clamp to 0 if negative due to forward snap)
+        event.time = math.max(0, (self.internal_tick - self.recording_start_tick) / self.tpb)
+        table.insert(self.events, event)
+        return true
+    end
+    
+    return false
+end
+
+-- Record note
+function Sequencer:recordNote(note, velocity, duration)
+    -- Start recording on first note-on if armed
+    if self.state == "ARMED" and velocity > 0 then
+        self:startRecording()
+    end
+
+    local recorded = self:recordEvent({
+        type = "note",
+        note = note,
+        velocity = velocity,
+        duration = duration
+    })
+
+    if recorded and self.state == "RECORDING" then
+        if velocity > 0 and not duration then
+            -- Only track note-ons without duration (duration notes get automatic note-off)
+            self.recording_held_notes[note] = true
+        elseif velocity == 0 then
+            self.recording_held_notes[note] = nil
+        end
+    end
+end
+
+-- Record knob
+function Sequencer:recordKnob(knob_num, value)
+    -- Start recording on first knob change if armed
+    if self.state == "ARMED" then
+        self:startRecording()
+    end
+
+    self:recordEvent({
+        type = "knob" .. knob_num,
+        value = value
+    })
+end
+
+-- Check if we're on a beat boundary
+local function is_beat_boundary(tick, tpb)
+    return tick % tpb == 0
+end
+
+-- Play a single event
+function Sequencer:playEvent(event)
+    if event.type == "note" then
+        self.output("note", event.note, event.velocity, event.duration)
+        if event.velocity > 0 and not event.duration then
+            -- Only track note-ons without duration (duration notes get automatic note-off)
+            self.playback_held_notes[event.note] = (self.playback_held_notes[event.note] or 0) + 1
+        elseif event.velocity == 0 then
+            local count = self.playback_held_notes[event.note] or 0
+            if count > 1 then
+                self.playback_held_notes[event.note] = count - 1
+            else
+                self.playback_held_notes[event.note] = nil
+            end
+        end
+    elseif event.type:match("^knob%d$") then
+        self.output("knobs", event.type, event.value)
+    end
+end
+
+-- Playback (call every tick)
+function Sequencer:tick()
+    self.internal_tick = self.internal_tick + 1
+    
+    if self.sync_pending then
+        if is_beat_boundary(self.internal_tick, self.tpb) then
+            self.state = "PLAYING"
+            self.playback_tick = 0
+            self.event_index = 1
+            self.playback_held_notes = {}
+            self.sync_pending = false
+        end
+        return
+    end
+    
+    if self.state ~= "PLAYING" then return end
+    
+    local current_beat = self.playback_tick / self.tpb
+    
+    -- Play events at current beat
+    while self.event_index <= #self.events do
+        local event = self.events[self.event_index]
+        if event.time <= current_beat then
+            self:playEvent(event)
+            self.event_index = self.event_index + 1
+        else
+            break
+        end
+    end
+
+    self.playback_tick = self.playback_tick + 1
+
+    -- Loop: check if the NEXT tick would exceed loop_length
+    local next_beat = self.playback_tick / self.tpb
+    if next_beat >= self.loop_length then
+        -- Play any remaining events before resetting
+        while self.event_index <= #self.events do
+            self:playEvent(self.events[self.event_index])
+            self.event_index = self.event_index + 1
+        end
+        -- Send note-offs for any still-held notes (handles missing note-offs in sequence)
+        for note, count in pairs(self.playback_held_notes) do
+            for i = 1, count do
+                self.output("note", note, 0)
+            end
+        end
+        self.playback_held_notes = {}
+
+        -- Check for pending transition (seamless preset switch)
+        if self.transition_pending then
+            -- Swap to new sequence
+            self.events = self.pending_events
+            self.loop_length = self.pending_loop_length
+            self.pending_events = nil
+            self.pending_loop_length = nil
+            self.transition_pending = false
+            print("Transitioned to new sequence")
+        end
+
+        self.playback_tick = 0
+        self.event_index = 1
+    end
+end
+
+-- State queries
+function Sequencer:isRecording()
+    return self.state == "RECORDING"
+end
+
+function Sequencer:isPlaying()
+    return self.state == "PLAYING"
+end
+
+function Sequencer:isArmed()
+    return self.state == "ARMED"
+end
+
+function Sequencer:isStopped()
+    return self.state == "STOPPED"
+end
+
+function Sequencer:isSyncing()
+    return self.sync_pending
+end
+
+function Sequencer:hasEvents()
+    return #self.events > 0
+end
+
+function Sequencer:getState()
+    if self.sync_pending then
+        return "SYNCING"
+    end
+    return self.state
+end
+
+function Sequencer:clear()
+    self.events = {}
+    self.loop_length = 0
+end
+
+-- Serialize sequence to saveable table
+function Sequencer:serialize()
+    if #self.events == 0 then
+        return nil
+    end
+    
+    return {
+        events = self.events,
+        loop_length = self.loop_length
+    }
+end
+
+-- Load sequence from saved data
+-- If currently playing, stages transition for next beat boundary
+function Sequencer:deserialize(data, immediate)
+    if not data then
+        self:clear()
+        return
+    end
+
+    -- If playing and not forcing immediate, stage transition
+    if self.state == "PLAYING" and not immediate then
+        self.pending_events = data.events or {}
+        self.pending_loop_length = data.loop_length or 0
+        self.transition_pending = true
+        print(string.format("Staged sequence transition: %.2f beats, %d events",
+                            self.pending_loop_length, #self.pending_events))
+        return
+    end
+
+    -- Otherwise load immediately
+    self.events = data.events or {}
+    self.loop_length = data.loop_length or 0
+    self.playback_tick = 0
+    self.event_index = 1
+    self.state = "STOPPED"
+    self.sync_pending = false
+    self.transition_pending = false
+
+    print(string.format("Loaded sequence: %.2f beats, %d events",
+                        self.loop_length, #self.events))
+end
+
+-- Print sequencer stats
+function Sequencer:printInfo(print_callback)
+    print_callback = print_callback or print
+    
+    local separator = string.rep("-", 70)
+    print_callback(separator)
+    print_callback("SEQUENCER STATE: " .. self:getState())
+    print_callback("Loop Length: " .. string.format("%.2f", self.loop_length) .. " beats")
+    print_callback("Total Events: " .. #self.events)
+    print_callback(separator)
+end
+
+-- Print sequencer state and events
+function Sequencer:print(print_callback)
+    print_callback = print_callback or print
+    
+    local separator = string.rep("-", 70)
+    print_callback(separator)
+    print_callback("SEQUENCER STATE: " .. self:getState())
+    print_callback("Loop Length: " .. string.format("%.2f", self.loop_length) .. " beats")
+    print_callback("Total Events: " .. #self.events)
+    print_callback(separator)
+    
+    if #self.events == 0 then
+        print_callback("No events recorded")
+        print_callback(separator)
+        return
+    end
+    
+    local headerFormat = "%-5s | %-8s | %-10s | %s"
+    print_callback(string.format(headerFormat, "Index", "Time", "Type", "Data"))
+    print_callback(separator)
+    
+    for idx, event in ipairs(self.events) do
+        local data_parts = {}
+        for k, v in pairs(event) do
+            if k ~= "time" and k ~= "type" then
+                table.insert(data_parts, k .. "=" .. tostring(v))
+            end
+        end
+        local data_str = table.concat(data_parts, ", ")
+        
+        local formatStr = "%-5s | %-8s | %-10s | %s"
+        local info = string.format(
+            formatStr,
+            tostring(idx),
+            string.format("%.3f", event.time),
+            event.type or "?",
+            data_str
+        )
+        print_callback(info)
+    end
+    
+    print_callback(separator)
+    
+    if self.state == "PLAYING" then
+        local current_beat = self.playback_tick / self.tpb
+        print_callback(string.format("Playback Position: %.2f beats (Event Index: %d)", 
+            current_beat, self.event_index))
+        print_callback(separator)
+    end
+end
+
+return {
+    Sequencer = Sequencer
+}
