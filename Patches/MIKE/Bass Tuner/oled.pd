@@ -1,0 +1,128 @@
+#N canvas 6 50 1265 639 10;
+#X obj 29 149 s oscOut;
+#X text 560 -21 Drawing on Organelle OLED.;
+#X text 559 92 The OLED is 128 x 64 pixels. Each one is on or off (0
+or 1);
+#X text 560 115 Point 0 \, 0 is top left of screen.;
+#X text 560 138 The internal update rate is around 20 frames per second
+\, so you shouldn't send commands (or groups of commands e.g. to draw
+a frame) faster than 50 ms \, it will only eat CPU.;
+#X msg 321 101 /oled/gShowInfoBar 3 0;
+#X msg 305 125 /oled/gClear 3 1;
+#X msg 116 641 /oled/gFlip 3;
+#X text 559 1 The message format is: command \, screen number \, [x
+\, y \, other stuff];
+#X text 559 57 The x and y coordinates and other stuff is optional
+depending on message.;
+#X text 560 35 The screen number is always 3;
+#X text 562 233 Line \, start x \, y \, end x \, y \, color (0 or 1)
+;
+#X text 563 252 Box \, x \, y \, width \, height \, color (0 or 1)
+;
+#X text 563 277 Print line \, x \, y \, size \, color \, stuff to print
+;
+#X text 580 296 4 font sizes available: 8 \, 16 \, 24 \, 32;
+#X msg 807 387 /oled/gPrintln 3 0 10 16 1 Bigger;
+#X msg 806 412 /oled/gPrintln 3 0 28 24 1 Big;
+#X msg 805 436 /oled/gPrintln 3 50 28 32 1 Huge;
+#X msg 804 362 /oled/gPrintln 3 0 0 8 1 Small;
+#X text 947 521 update display;
+#X msg 826 520 /oled/gFlip 3;
+#X text 562 196 All drawing messages must be followed by a gFlip to
+update the display.;
+#X obj 124 50 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 156 469 /oled/gLine 3 \$1 25 \$1 45 1;
+#X obj 121 76 t b b f b b b b b b b b b b b;
+#X msg 206 269 /oled/gLine 3 63 22 63 30 1;
+#X msg 199 348 /oled/gPrintln 3 0 120 8 1 [1] Tuning :;
+#X obj 199 390 list append;
+#X obj 189 296 t b b;
+#X obj 199 412 list trim;
+#X obj 146 596 list append;
+#X obj 136 502 t b b;
+#X obj 146 618 list trim;
+#X obj 193 526 symbol;
+#X obj 232 500 r string;
+#X obj 275 327 symbol;
+#X obj 344 304 r tuning-type;
+#X obj 344 326 print;
+#X msg 146 554 /oled/gPrintln 3 59 2 16 1;
+#X obj 122 -112 r cursor_tuner;
+#X msg 173 443 /oled/gBox 3 1 20 125 30 1;
+#X obj 122 -87 + 1;
+#X obj 122 -65 * 60;
+#X obj 122 -43 + 3;
+#X obj 122 -21 i;
+#X floatatom 185 -79 5 0 0 0 - - -, f 5;
+#X obj 122 5 clip 3 123;
+#X floatatom 66 31 5 0 0 0 - - -, f 5;
+#X msg 216 239 /oled/gLine 3 42 22 42 25 1;
+#X msg 225 209 /oled/gLine 3 21 22 21 25 1;
+#X msg 266 182 /oled/gLine 3 84 22 84 25 1;
+#X msg 283 152 /oled/gLine 3 105 22 105 25 1;
+#X obj 305 -68 sig~;
+#X obj 304 -16 snapshot~;
+#X obj 397 -58 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 397 -36 metro 100;
+#X obj 30 57 loadbang;
+#X msg 324 513 symbol E;
+#X obj 388 487 loadbang;
+#X obj 50 89 delay 500;
+#X obj 392 -83 loadbang;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 0;
+#X connect 22 0 24 0;
+#X connect 23 0 0 0;
+#X connect 24 0 7 0;
+#X connect 24 1 31 0;
+#X connect 24 2 23 0;
+#X connect 24 3 40 0;
+#X connect 24 4 28 0;
+#X connect 24 5 25 0;
+#X connect 24 6 48 0;
+#X connect 24 7 49 0;
+#X connect 24 10 50 0;
+#X connect 24 11 51 0;
+#X connect 24 12 6 0;
+#X connect 24 13 5 0;
+#X connect 25 0 0 0;
+#X connect 26 0 27 0;
+#X connect 27 0 29 0;
+#X connect 28 0 26 0;
+#X connect 28 1 35 0;
+#X connect 29 0 0 0;
+#X connect 30 0 32 0;
+#X connect 31 0 38 0;
+#X connect 31 1 33 0;
+#X connect 32 0 0 0;
+#X connect 33 0 30 1;
+#X connect 34 0 33 1;
+#X connect 35 0 27 1;
+#X connect 36 0 35 1;
+#X connect 36 0 37 0;
+#X connect 38 0 30 0;
+#X connect 39 0 41 0;
+#X connect 39 0 45 0;
+#X connect 40 0 0 0;
+#X connect 41 0 42 0;
+#X connect 42 0 43 0;
+#X connect 43 0 44 0;
+#X connect 44 0 46 0;
+#X connect 46 0 47 0;
+#X connect 46 0 52 0;
+#X connect 48 0 0 0;
+#X connect 49 0 0 0;
+#X connect 50 0 0 0;
+#X connect 51 0 0 0;
+#X connect 52 0 53 0;
+#X connect 53 0 22 0;
+#X connect 54 0 55 0;
+#X connect 55 0 53 0;
+#X connect 56 0 59 0;
+#X connect 57 0 33 1;
+#X connect 58 0 57 0;
+#X connect 59 0 24 0;
+#X connect 60 0 54 0;

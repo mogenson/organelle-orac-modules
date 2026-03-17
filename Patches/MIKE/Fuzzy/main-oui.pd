@@ -1,0 +1,9 @@
+#N canvas 1363 96 819 440 12;
+#X declare -path organelle;
+#X declare -path lib;
+#X obj 395 62 main;
+#X obj 226 62 declare -path organelle;
+#X obj 99 87 organelle;
+#X obj 431 62 reset;
+#X obj 99 62 declare -path lib;
+#X obj 99 317 midi-map-ffm12;

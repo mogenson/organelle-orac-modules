@@ -1,0 +1,15 @@
+#N canvas 129 149 492 285 12;
+#X obj 22 21 inlet~;
+#X obj 22 210 outlet~;
+#X obj 244 47 inlet amount;
+#X obj 23 180 expr~ tanh($f2 * sin($v1)) / $f2;
+#X obj 173 47 loadbang;
+#X msg 173 71 1;
+#X text 243 21 1 - n;
+#X obj 244 73 clip 1 10000;
+#X connect 0 0 3 0;
+#X connect 2 0 7 0;
+#X connect 3 0 1 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 1;
+#X connect 7 0 3 1;

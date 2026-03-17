@@ -1,0 +1,55 @@
+#N canvas 654 806 1354 393 12;
+#X obj 11 21 cnv 19 624 23 empty empty empty 20 12 0 12 -191407 -66577
+0;
+#X obj 613 51 midiCtl;
+#X obj 11 186 s midiKnob1;
+#X obj 313 186 s midiKnob4;
+#X floatatom 1132 207 5 0 0 0 - - -;
+#X obj 1032 323 t b f;
+#X obj 1032 296 expr if ($f1 < $f2 || $f2 == 0 \, 0 \, 1);
+#X obj 1288 270 +;
+#X obj 1064 348 s midiEnc;
+#X obj 413 187 sel 1;
+#X obj 413 211 s midiEncbut;
+#X obj 514 188 * 4;
+#X obj 514 212 s midiVol;
+#X obj 615 188 s midiMute;
+#X obj 715 189 s midiFS;
+#X obj 816 189 s midiExp;
+#X obj 917 190 s midiAux;
+#X obj 1017 190 s midiDSP;
+#X obj 11 128 r midiCV;
+#X obj 111 186 s midiKnob2;
+#X obj 212 186 s midiKnob3;
+#X text 10 -1 This is the midi mapping for a faderfox;
+#X obj 613 25 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 504 23 Print MIDI info;
+#X text 178 94 Add your fader and knob numbers in the route. Faderfox
+has an encoder on the 61 This ist the last entry with the special processing
+to get 0 or 1;
+#X text 15 24 MIDI map for Organelle UI (Faderfox M12);
+#X obj 11 154 route 25 26 27 28 62 1 49 50 29 51 60 61, f 173;
+#X connect 4 0 7 1;
+#X connect 5 0 7 0;
+#X connect 5 1 8 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 1;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 18 0 26 0;
+#X connect 22 0 1 0;
+#X connect 26 0 2 0;
+#X connect 26 1 19 0;
+#X connect 26 2 20 0;
+#X connect 26 3 3 0;
+#X connect 26 4 9 0;
+#X connect 26 5 11 0;
+#X connect 26 6 13 0;
+#X connect 26 7 14 0;
+#X connect 26 8 15 0;
+#X connect 26 9 16 0;
+#X connect 26 10 17 0;
+#X connect 26 11 4 0;
+#X connect 26 11 6 0;
+#X coords 0 -1 1 1 626 25 2 10 20;

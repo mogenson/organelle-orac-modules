@@ -1,0 +1,17 @@
+#N canvas 776 516 1140 528 12;
+#X obj 45 38 t a b;
+#X msg 77 61 clear;
+#X obj 45 109 list trim;
+#X obj 45 12 inlet;
+#X obj 45 139 s pd-\$1-screenline\$2;
+#X text 132 60 first clear the subpatch;
+#X text 205 85 text=comment x=2 y=0;
+#X text 205 110 trim 'list' selector;
+#X text 207 139 parent \$0 is first argument of this abstraction;
+#X obj 45 85 list prepend text 2 2;
+#X connect 0 0 9 0;
+#X connect 0 1 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 9 0 2 0;

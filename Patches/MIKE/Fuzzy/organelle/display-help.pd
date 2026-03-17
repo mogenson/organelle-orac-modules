@@ -1,0 +1,17 @@
+#N canvas 64 64 1507 781 12;
+#X obj 101 15 hsl 162 19 0 127 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 98 37 int;
+#X msg 98 59 Freq 1 fact: \$1;
+#X obj 254 67 hsl 162 19 0 127 0 0 empty empty empty -2 -10 0 12 #fcfcfc #000000 #000000 0 1;
+#X obj 251 89 int;
+#X msg 251 111 Freq 1 \$1 Hz;
+#X obj 98 173 od;
+#X text 352 224 <--- [od];
+#X msg 422 123 hello world!;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 1;
+#X connect 8 0 6 3;
