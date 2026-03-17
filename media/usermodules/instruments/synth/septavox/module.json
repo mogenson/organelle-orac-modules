@@ -1,0 +1,23 @@
+{
+    "name" : "septavox",
+    "display" : "Septavox",
+    "parameters" :  [ 
+        ["int","waveform","Waveform",0,6,0],
+        ["pct","tune","Tune",-100,100,0],
+        ["pct","depth","Depth",0,100,0],
+        ["pct","rate","Rate",0,100,0],
+        ["pct","amount","Amount",0,100,0],
+        ["pct","glide_time","GlideTime",0,100,0],
+        ["pct","pattern","Pattern",0,100,0],
+    ],
+    "pages" : [ 
+        ["Vibrato","",["waveform", "tune", "depth", "rate"]],
+        ["Slide","",["waveform","tune","amount","glide_time"]],
+        ["Arp","",["waveform","tune","envelope","rate"]],
+        ["Swell"],
+        ["OctCascade"],
+        ["Slicer"],
+        ["PipeGlide"]
+    ]
+}
+
