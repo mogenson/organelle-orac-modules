@@ -1,0 +1,9 @@
+a4ca5eb017cc37a0f9a9a2c2cd2279a1e0dd9a11  percussions/deploy.sh
+d715d73e0461dadd1c3f01b53b55a7e4ed896bb4  percussions/load-24.pd
+77eb7b7288d722fef8a33bb01d35f758f097ea15  percussions/window.txt
+4d37d9d8706aa23021ccca74a8c9795f06b7c069  percussions/s_vphasor.pd
+74189259b07f8a5a5ef081d4917f045352dfd439  percussions/module.json
+91e09535053540756ac7deb534deea97bd811dad  percussions/crown-window.pd
+e60aeefde055043e331015e0b67f7a325acc9afa  percussions/module.pd
+bc5d88a5f178ad3cbfc18845c94ba6aa4abefc55  percussions/s_vphasor-help.pd
+4eda4085ec631b4c09c1cdb6fd1cf9117c19a885  percussions/s24-voice.pd
