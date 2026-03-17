@@ -1,0 +1,272 @@
+4699eeb0e4bf6e8095e9cf125f52d9606c33822e  PLAY/Organ Electric/jam.lua
+4d65a501e2381d0aa20c00ac9a9af0e3b50e9f93  PLAY/Organ Electric/mother.pd
+5de0b4cf3eaefe54db72d6dcc059231b47d607ac  PLAY/Organ Electric/README.md
+a17414e453cbb2343bbe296c410b947c3892b5a2  PLAY/Organ Electric/fsynth.dsp
+9b51d3cb0ca1b8a17db2b5b7a2433e272c40d849  PLAY/Organ Electric/compile.sh
+910eba06dfb9d4d040c7a018ce2b01c22ba30dca  PLAY/Organ Electric/lib/organelle_track.lua
+2cfc3bdea24e0588e09fb94a85ab38704dff9b7e  PLAY/Organ Electric/lib/sequencer.lua
+bb26e05f681e72f9672129715f04e2b6ccfbd27d  PLAY/Organ Electric/lib/tick.pd
+9d9ee40438edbf8cd7e38814f133a74e7f7166fc  PLAY/Organ Electric/lib/subjam.lua
+e7241c62f76e4cb45af6193903418815da8cf15c  PLAY/Organ Electric/lib/utils.lua
+2a59ef7eeeea26086cec66c1401079ab31391e46  PLAY/Organ Electric/lib/synthvoice.pd
+73e15df716692a5b2be85c44c29f821b92e11159  PLAY/Organ Electric/lib/metro1.wav
+f4e121ebadd7d1fb318f54a591b6b97026e3973e  PLAY/Organ Electric/lib/fsynth~.pd_linux
+79feb2009cc852e4eca62629214f31ca5d24f6e0  PLAY/Organ Electric/lib/chord.lua
+c00ff76254c7fc5a67eb1ed5ddd91a32353c1ab9  PLAY/Organ Electric/lib/presets.lua
+5f8a18d12bdab2af4877a5887fab6df42b2eb6d4  PLAY/Organ Electric/lib/jam.pd_linux
+b2c69fc17cf1e51112d7496b882dcfe3b6ad7070  PLAY/Organ Electric/lib/latch.lua
+509966df4bd1c46fc61497a658841e6a00d27c1f  PLAY/Organ Electric/lib/ogui.lua
+cc65e6cfab17bcac94edba1cf248ffc1c6b338a5  PLAY/Organ Electric/lib/progression.lua
+8bfc99bfa91019c761890aa5a61571a5adfdf104  PLAY/Organ Electric/patterns/B-Repeats.lua
+933c02e084538cc38c8dbebbcce6aeed835e2b94  PLAY/Organ Electric/patterns/L-Genny.lua
+40250d176c1a0eefde2e20d26491978838340f7e  PLAY/Organ Electric/patterns/G-UpDown.lua
+acc041f722340a89d0d0c9094aa0bdac0ab7ebf9  PLAY/Organ Electric/patterns/A-None.lua
+97d5833157cfcc790067bd875a14875d86c08533  PLAY/Organ Electric/patterns/H-Poly Rate.lua
+8a2436a8f3492dcf814958e58b0dd1e70caa2fd9  PLAY/Organ Electric/patterns/I-Wave.lua
+1c196838c8356ec90a143efea2bef0d50d0f1331  PLAY/Organ Electric/patterns/E-Cascade.lua
+9b097865e2604fd7ef4e57f7445b74f132837a6f  PLAY/Organ Electric/patterns/F-More Fast.lua
+672367ae86c844e7760509020663a29406a6853e  PLAY/Organ Electric/patterns/J-BounceBall.lua
+d5d0d3330c0fa6e1a551cd47e908dd07cc59924a  PLAY/Organ Electric/patterns/N-Sierpinski.lua
+79a282269fad1f6751bf465541df753ebe03f6bd  PLAY/Organ Electric/patterns/M-Stages.lua
+21b17d2883fb2885765e578a9b3de5dedd77a159  PLAY/Organ Electric/patterns/D-Cycle You.lua
+5d600b44ae6444ffb5e47832d1382784d3c1838a  PLAY/Organ Electric/patterns/C-Cycle Up.lua
+2f1ba002631216f5fe6fddd2804a13028b5c92ad  PLAY/Organ Electric/patterns/K-Phased.lua
+eb89e81ece32a0ee47f5201fdee67887af0f1ef0  PLAY/Organ Electric/main.pd
+c0c4cd3777041711c073889edb6b261e3849072c  PLAY/CZ/jam.lua
+4d65a501e2381d0aa20c00ac9a9af0e3b50e9f93  PLAY/CZ/mother.pd
+0f724ed8f4ac999ba634385232808b3d7e70317b  PLAY/CZ/README.md
+cb126e837c23e1300a4b41a51527e1de0c5c07d4  PLAY/CZ/fsynth.dsp
+9b51d3cb0ca1b8a17db2b5b7a2433e272c40d849  PLAY/CZ/compile.sh
+910eba06dfb9d4d040c7a018ce2b01c22ba30dca  PLAY/CZ/lib/organelle_track.lua
+2cfc3bdea24e0588e09fb94a85ab38704dff9b7e  PLAY/CZ/lib/sequencer.lua
+bb26e05f681e72f9672129715f04e2b6ccfbd27d  PLAY/CZ/lib/tick.pd
+9d9ee40438edbf8cd7e38814f133a74e7f7166fc  PLAY/CZ/lib/subjam.lua
+e7241c62f76e4cb45af6193903418815da8cf15c  PLAY/CZ/lib/utils.lua
+2a59ef7eeeea26086cec66c1401079ab31391e46  PLAY/CZ/lib/synthvoice.pd
+73e15df716692a5b2be85c44c29f821b92e11159  PLAY/CZ/lib/metro1.wav
+b267a8b50d24f6d903eb0a04de3bf625207f0783  PLAY/CZ/lib/fsynth~.pd_linux
+79feb2009cc852e4eca62629214f31ca5d24f6e0  PLAY/CZ/lib/chord.lua
+c00ff76254c7fc5a67eb1ed5ddd91a32353c1ab9  PLAY/CZ/lib/presets.lua
+5f8a18d12bdab2af4877a5887fab6df42b2eb6d4  PLAY/CZ/lib/jam.pd_linux
+b2c69fc17cf1e51112d7496b882dcfe3b6ad7070  PLAY/CZ/lib/latch.lua
+509966df4bd1c46fc61497a658841e6a00d27c1f  PLAY/CZ/lib/ogui.lua
+cc65e6cfab17bcac94edba1cf248ffc1c6b338a5  PLAY/CZ/lib/progression.lua
+8bfc99bfa91019c761890aa5a61571a5adfdf104  PLAY/CZ/patterns/B-Repeats.lua
+933c02e084538cc38c8dbebbcce6aeed835e2b94  PLAY/CZ/patterns/L-Genny.lua
+40250d176c1a0eefde2e20d26491978838340f7e  PLAY/CZ/patterns/G-UpDown.lua
+acc041f722340a89d0d0c9094aa0bdac0ab7ebf9  PLAY/CZ/patterns/A-None.lua
+97d5833157cfcc790067bd875a14875d86c08533  PLAY/CZ/patterns/H-Poly Rate.lua
+8a2436a8f3492dcf814958e58b0dd1e70caa2fd9  PLAY/CZ/patterns/I-Wave.lua
+1c196838c8356ec90a143efea2bef0d50d0f1331  PLAY/CZ/patterns/E-Cascade.lua
+9b097865e2604fd7ef4e57f7445b74f132837a6f  PLAY/CZ/patterns/F-More Fast.lua
+672367ae86c844e7760509020663a29406a6853e  PLAY/CZ/patterns/J-BounceBall.lua
+d5d0d3330c0fa6e1a551cd47e908dd07cc59924a  PLAY/CZ/patterns/N-Sierpinski.lua
+79a282269fad1f6751bf465541df753ebe03f6bd  PLAY/CZ/patterns/M-Stages.lua
+21b17d2883fb2885765e578a9b3de5dedd77a159  PLAY/CZ/patterns/D-Cycle You.lua
+5d600b44ae6444ffb5e47832d1382784d3c1838a  PLAY/CZ/patterns/C-Cycle Up.lua
+2f1ba002631216f5fe6fddd2804a13028b5c92ad  PLAY/CZ/patterns/K-Phased.lua
+eb89e81ece32a0ee47f5201fdee67887af0f1ef0  PLAY/CZ/main.pd
+3d42d496bc93c873e49169efa64c1495fa89d87f  PLAY/Reeds/jam.lua
+4d65a501e2381d0aa20c00ac9a9af0e3b50e9f93  PLAY/Reeds/mother.pd
+d533f6f43a0e727cabf56a0031effb733be25daa  PLAY/Reeds/README.md
+cd96a6d85df6130323a172ca324b06af763ba522  PLAY/Reeds/fsynth.dsp
+9b51d3cb0ca1b8a17db2b5b7a2433e272c40d849  PLAY/Reeds/compile.sh
+910eba06dfb9d4d040c7a018ce2b01c22ba30dca  PLAY/Reeds/lib/organelle_track.lua
+2cfc3bdea24e0588e09fb94a85ab38704dff9b7e  PLAY/Reeds/lib/sequencer.lua
+bb26e05f681e72f9672129715f04e2b6ccfbd27d  PLAY/Reeds/lib/tick.pd
+9d9ee40438edbf8cd7e38814f133a74e7f7166fc  PLAY/Reeds/lib/subjam.lua
+e7241c62f76e4cb45af6193903418815da8cf15c  PLAY/Reeds/lib/utils.lua
+2a59ef7eeeea26086cec66c1401079ab31391e46  PLAY/Reeds/lib/synthvoice.pd
+73e15df716692a5b2be85c44c29f821b92e11159  PLAY/Reeds/lib/metro1.wav
+30b85c8ad32e51b4f12d0a0f0ea9ca1df0f7199b  PLAY/Reeds/lib/fsynth~.pd_linux
+79feb2009cc852e4eca62629214f31ca5d24f6e0  PLAY/Reeds/lib/chord.lua
+c00ff76254c7fc5a67eb1ed5ddd91a32353c1ab9  PLAY/Reeds/lib/presets.lua
+5f8a18d12bdab2af4877a5887fab6df42b2eb6d4  PLAY/Reeds/lib/jam.pd_linux
+b2c69fc17cf1e51112d7496b882dcfe3b6ad7070  PLAY/Reeds/lib/latch.lua
+509966df4bd1c46fc61497a658841e6a00d27c1f  PLAY/Reeds/lib/ogui.lua
+cc65e6cfab17bcac94edba1cf248ffc1c6b338a5  PLAY/Reeds/lib/progression.lua
+8bfc99bfa91019c761890aa5a61571a5adfdf104  PLAY/Reeds/patterns/B-Repeats.lua
+933c02e084538cc38c8dbebbcce6aeed835e2b94  PLAY/Reeds/patterns/L-Genny.lua
+40250d176c1a0eefde2e20d26491978838340f7e  PLAY/Reeds/patterns/G-UpDown.lua
+acc041f722340a89d0d0c9094aa0bdac0ab7ebf9  PLAY/Reeds/patterns/A-None.lua
+97d5833157cfcc790067bd875a14875d86c08533  PLAY/Reeds/patterns/H-Poly Rate.lua
+8a2436a8f3492dcf814958e58b0dd1e70caa2fd9  PLAY/Reeds/patterns/I-Wave.lua
+1c196838c8356ec90a143efea2bef0d50d0f1331  PLAY/Reeds/patterns/E-Cascade.lua
+9b097865e2604fd7ef4e57f7445b74f132837a6f  PLAY/Reeds/patterns/F-More Fast.lua
+672367ae86c844e7760509020663a29406a6853e  PLAY/Reeds/patterns/J-BounceBall.lua
+d5d0d3330c0fa6e1a551cd47e908dd07cc59924a  PLAY/Reeds/patterns/N-Sierpinski.lua
+79a282269fad1f6751bf465541df753ebe03f6bd  PLAY/Reeds/patterns/M-Stages.lua
+21b17d2883fb2885765e578a9b3de5dedd77a159  PLAY/Reeds/patterns/D-Cycle You.lua
+5d600b44ae6444ffb5e47832d1382784d3c1838a  PLAY/Reeds/patterns/C-Cycle Up.lua
+2f1ba002631216f5fe6fddd2804a13028b5c92ad  PLAY/Reeds/patterns/K-Phased.lua
+eb89e81ece32a0ee47f5201fdee67887af0f1ef0  PLAY/Reeds/main.pd
+6bb7316c1cd7eed2889618cba5d3a3fe4fcc841e  PLAY/Cini/jam.lua
+4d65a501e2381d0aa20c00ac9a9af0e3b50e9f93  PLAY/Cini/mother.pd
+28d8316f3f6acd14ce4e3713594966c8a2e2a98a  PLAY/Cini/README.md
+6f98ae2e8465afc0fdaf83a7fb95b3f96e71b810  PLAY/Cini/fsynth.dsp
+9b51d3cb0ca1b8a17db2b5b7a2433e272c40d849  PLAY/Cini/compile.sh
+910eba06dfb9d4d040c7a018ce2b01c22ba30dca  PLAY/Cini/lib/organelle_track.lua
+2cfc3bdea24e0588e09fb94a85ab38704dff9b7e  PLAY/Cini/lib/sequencer.lua
+bb26e05f681e72f9672129715f04e2b6ccfbd27d  PLAY/Cini/lib/tick.pd
+9d9ee40438edbf8cd7e38814f133a74e7f7166fc  PLAY/Cini/lib/subjam.lua
+e7241c62f76e4cb45af6193903418815da8cf15c  PLAY/Cini/lib/utils.lua
+2a59ef7eeeea26086cec66c1401079ab31391e46  PLAY/Cini/lib/synthvoice.pd
+73e15df716692a5b2be85c44c29f821b92e11159  PLAY/Cini/lib/metro1.wav
+fd9b7d3c9a24b5bf50154828f318fcba7bee176d  PLAY/Cini/lib/fsynth~.pd_linux
+79feb2009cc852e4eca62629214f31ca5d24f6e0  PLAY/Cini/lib/chord.lua
+c00ff76254c7fc5a67eb1ed5ddd91a32353c1ab9  PLAY/Cini/lib/presets.lua
+5f8a18d12bdab2af4877a5887fab6df42b2eb6d4  PLAY/Cini/lib/jam.pd_linux
+b2c69fc17cf1e51112d7496b882dcfe3b6ad7070  PLAY/Cini/lib/latch.lua
+509966df4bd1c46fc61497a658841e6a00d27c1f  PLAY/Cini/lib/ogui.lua
+cc65e6cfab17bcac94edba1cf248ffc1c6b338a5  PLAY/Cini/lib/progression.lua
+8bfc99bfa91019c761890aa5a61571a5adfdf104  PLAY/Cini/patterns/B-Repeats.lua
+933c02e084538cc38c8dbebbcce6aeed835e2b94  PLAY/Cini/patterns/L-Genny.lua
+40250d176c1a0eefde2e20d26491978838340f7e  PLAY/Cini/patterns/G-UpDown.lua
+acc041f722340a89d0d0c9094aa0bdac0ab7ebf9  PLAY/Cini/patterns/A-None.lua
+97d5833157cfcc790067bd875a14875d86c08533  PLAY/Cini/patterns/H-Poly Rate.lua
+8a2436a8f3492dcf814958e58b0dd1e70caa2fd9  PLAY/Cini/patterns/I-Wave.lua
+1c196838c8356ec90a143efea2bef0d50d0f1331  PLAY/Cini/patterns/E-Cascade.lua
+9b097865e2604fd7ef4e57f7445b74f132837a6f  PLAY/Cini/patterns/F-More Fast.lua
+672367ae86c844e7760509020663a29406a6853e  PLAY/Cini/patterns/J-BounceBall.lua
+d5d0d3330c0fa6e1a551cd47e908dd07cc59924a  PLAY/Cini/patterns/N-Sierpinski.lua
+79a282269fad1f6751bf465541df753ebe03f6bd  PLAY/Cini/patterns/M-Stages.lua
+21b17d2883fb2885765e578a9b3de5dedd77a159  PLAY/Cini/patterns/D-Cycle You.lua
+5d600b44ae6444ffb5e47832d1382784d3c1838a  PLAY/Cini/patterns/C-Cycle Up.lua
+2f1ba002631216f5fe6fddd2804a13028b5c92ad  PLAY/Cini/patterns/K-Phased.lua
+eb89e81ece32a0ee47f5201fdee67887af0f1ef0  PLAY/Cini/main.pd
+f41705414f8977650774a3aa78ed20a9a87b3c00  PLAY/Organ Special/jam.lua
+4d65a501e2381d0aa20c00ac9a9af0e3b50e9f93  PLAY/Organ Special/mother.pd
+1c06cbff78d5683e0a6ae84e72914ef06eae3d0e  PLAY/Organ Special/README.md
+fd97b5d94fdaec84bd17adf91c2197be8dfdbb6e  PLAY/Organ Special/fsynth.dsp
+9b51d3cb0ca1b8a17db2b5b7a2433e272c40d849  PLAY/Organ Special/compile.sh
+910eba06dfb9d4d040c7a018ce2b01c22ba30dca  PLAY/Organ Special/lib/organelle_track.lua
+2cfc3bdea24e0588e09fb94a85ab38704dff9b7e  PLAY/Organ Special/lib/sequencer.lua
+bb26e05f681e72f9672129715f04e2b6ccfbd27d  PLAY/Organ Special/lib/tick.pd
+9d9ee40438edbf8cd7e38814f133a74e7f7166fc  PLAY/Organ Special/lib/subjam.lua
+e7241c62f76e4cb45af6193903418815da8cf15c  PLAY/Organ Special/lib/utils.lua
+2a59ef7eeeea26086cec66c1401079ab31391e46  PLAY/Organ Special/lib/synthvoice.pd
+73e15df716692a5b2be85c44c29f821b92e11159  PLAY/Organ Special/lib/metro1.wav
+8372cd79e0842785361ecf766b99aa0224a28514  PLAY/Organ Special/lib/fsynth~.pd_linux
+79feb2009cc852e4eca62629214f31ca5d24f6e0  PLAY/Organ Special/lib/chord.lua
+c00ff76254c7fc5a67eb1ed5ddd91a32353c1ab9  PLAY/Organ Special/lib/presets.lua
+5f8a18d12bdab2af4877a5887fab6df42b2eb6d4  PLAY/Organ Special/lib/jam.pd_linux
+b2c69fc17cf1e51112d7496b882dcfe3b6ad7070  PLAY/Organ Special/lib/latch.lua
+509966df4bd1c46fc61497a658841e6a00d27c1f  PLAY/Organ Special/lib/ogui.lua
+cc65e6cfab17bcac94edba1cf248ffc1c6b338a5  PLAY/Organ Special/lib/progression.lua
+8bfc99bfa91019c761890aa5a61571a5adfdf104  PLAY/Organ Special/patterns/B-Repeats.lua
+933c02e084538cc38c8dbebbcce6aeed835e2b94  PLAY/Organ Special/patterns/L-Genny.lua
+40250d176c1a0eefde2e20d26491978838340f7e  PLAY/Organ Special/patterns/G-UpDown.lua
+acc041f722340a89d0d0c9094aa0bdac0ab7ebf9  PLAY/Organ Special/patterns/A-None.lua
+97d5833157cfcc790067bd875a14875d86c08533  PLAY/Organ Special/patterns/H-Poly Rate.lua
+8a2436a8f3492dcf814958e58b0dd1e70caa2fd9  PLAY/Organ Special/patterns/I-Wave.lua
+1c196838c8356ec90a143efea2bef0d50d0f1331  PLAY/Organ Special/patterns/E-Cascade.lua
+9b097865e2604fd7ef4e57f7445b74f132837a6f  PLAY/Organ Special/patterns/F-More Fast.lua
+672367ae86c844e7760509020663a29406a6853e  PLAY/Organ Special/patterns/J-BounceBall.lua
+d5d0d3330c0fa6e1a551cd47e908dd07cc59924a  PLAY/Organ Special/patterns/N-Sierpinski.lua
+79a282269fad1f6751bf465541df753ebe03f6bd  PLAY/Organ Special/patterns/M-Stages.lua
+21b17d2883fb2885765e578a9b3de5dedd77a159  PLAY/Organ Special/patterns/D-Cycle You.lua
+5d600b44ae6444ffb5e47832d1382784d3c1838a  PLAY/Organ Special/patterns/C-Cycle Up.lua
+2f1ba002631216f5fe6fddd2804a13028b5c92ad  PLAY/Organ Special/patterns/K-Phased.lua
+eb89e81ece32a0ee47f5201fdee67887af0f1ef0  PLAY/Organ Special/main.pd
+814e2099b9035f77f769a1bff983c81b83cd5398  PLAY/Colossus/jam.lua
+4d65a501e2381d0aa20c00ac9a9af0e3b50e9f93  PLAY/Colossus/mother.pd
+a9a812c255739a6ce059676c0e2fa002188e4f38  PLAY/Colossus/README.md
+47cdb22886494b3060d936229c6a13d35a2661d4  PLAY/Colossus/fsynth.dsp
+9b51d3cb0ca1b8a17db2b5b7a2433e272c40d849  PLAY/Colossus/compile.sh
+910eba06dfb9d4d040c7a018ce2b01c22ba30dca  PLAY/Colossus/lib/organelle_track.lua
+2cfc3bdea24e0588e09fb94a85ab38704dff9b7e  PLAY/Colossus/lib/sequencer.lua
+bb26e05f681e72f9672129715f04e2b6ccfbd27d  PLAY/Colossus/lib/tick.pd
+9d9ee40438edbf8cd7e38814f133a74e7f7166fc  PLAY/Colossus/lib/subjam.lua
+e7241c62f76e4cb45af6193903418815da8cf15c  PLAY/Colossus/lib/utils.lua
+2a59ef7eeeea26086cec66c1401079ab31391e46  PLAY/Colossus/lib/synthvoice.pd
+73e15df716692a5b2be85c44c29f821b92e11159  PLAY/Colossus/lib/metro1.wav
+0053d9d81913d80f04c9d2aa79705a31226d51b7  PLAY/Colossus/lib/fsynth~.pd_linux
+79feb2009cc852e4eca62629214f31ca5d24f6e0  PLAY/Colossus/lib/chord.lua
+c00ff76254c7fc5a67eb1ed5ddd91a32353c1ab9  PLAY/Colossus/lib/presets.lua
+5f8a18d12bdab2af4877a5887fab6df42b2eb6d4  PLAY/Colossus/lib/jam.pd_linux
+b2c69fc17cf1e51112d7496b882dcfe3b6ad7070  PLAY/Colossus/lib/latch.lua
+509966df4bd1c46fc61497a658841e6a00d27c1f  PLAY/Colossus/lib/ogui.lua
+cc65e6cfab17bcac94edba1cf248ffc1c6b338a5  PLAY/Colossus/lib/progression.lua
+8bfc99bfa91019c761890aa5a61571a5adfdf104  PLAY/Colossus/patterns/B-Repeats.lua
+933c02e084538cc38c8dbebbcce6aeed835e2b94  PLAY/Colossus/patterns/L-Genny.lua
+40250d176c1a0eefde2e20d26491978838340f7e  PLAY/Colossus/patterns/G-UpDown.lua
+acc041f722340a89d0d0c9094aa0bdac0ab7ebf9  PLAY/Colossus/patterns/A-None.lua
+97d5833157cfcc790067bd875a14875d86c08533  PLAY/Colossus/patterns/H-Poly Rate.lua
+8a2436a8f3492dcf814958e58b0dd1e70caa2fd9  PLAY/Colossus/patterns/I-Wave.lua
+1c196838c8356ec90a143efea2bef0d50d0f1331  PLAY/Colossus/patterns/E-Cascade.lua
+9b097865e2604fd7ef4e57f7445b74f132837a6f  PLAY/Colossus/patterns/F-More Fast.lua
+672367ae86c844e7760509020663a29406a6853e  PLAY/Colossus/patterns/J-BounceBall.lua
+d5d0d3330c0fa6e1a551cd47e908dd07cc59924a  PLAY/Colossus/patterns/N-Sierpinski.lua
+79a282269fad1f6751bf465541df753ebe03f6bd  PLAY/Colossus/patterns/M-Stages.lua
+21b17d2883fb2885765e578a9b3de5dedd77a159  PLAY/Colossus/patterns/D-Cycle You.lua
+5d600b44ae6444ffb5e47832d1382784d3c1838a  PLAY/Colossus/patterns/C-Cycle Up.lua
+2f1ba002631216f5fe6fddd2804a13028b5c92ad  PLAY/Colossus/patterns/K-Phased.lua
+eb89e81ece32a0ee47f5201fdee67887af0f1ef0  PLAY/Colossus/main.pd
+f90e968f09819e289ce55a003c88c3ba93288a0b  PLAY/Lead HQ/jam.lua
+4d65a501e2381d0aa20c00ac9a9af0e3b50e9f93  PLAY/Lead HQ/mother.pd
+dcffd3dacc7e9cb33e9c59494f9fe341f8d34ea1  PLAY/Lead HQ/README.md
+899cac7e3c07957bbc0b0abb8491acfa5065c197  PLAY/Lead HQ/fsynth.dsp
+9b51d3cb0ca1b8a17db2b5b7a2433e272c40d849  PLAY/Lead HQ/compile.sh
+910eba06dfb9d4d040c7a018ce2b01c22ba30dca  PLAY/Lead HQ/lib/organelle_track.lua
+2cfc3bdea24e0588e09fb94a85ab38704dff9b7e  PLAY/Lead HQ/lib/sequencer.lua
+bb26e05f681e72f9672129715f04e2b6ccfbd27d  PLAY/Lead HQ/lib/tick.pd
+9d9ee40438edbf8cd7e38814f133a74e7f7166fc  PLAY/Lead HQ/lib/subjam.lua
+e7241c62f76e4cb45af6193903418815da8cf15c  PLAY/Lead HQ/lib/utils.lua
+2a59ef7eeeea26086cec66c1401079ab31391e46  PLAY/Lead HQ/lib/synthvoice.pd
+73e15df716692a5b2be85c44c29f821b92e11159  PLAY/Lead HQ/lib/metro1.wav
+7ec4f369e9fa3e6cee154d6c22af07981cb83663  PLAY/Lead HQ/lib/fsynth~.pd_linux
+79feb2009cc852e4eca62629214f31ca5d24f6e0  PLAY/Lead HQ/lib/chord.lua
+c00ff76254c7fc5a67eb1ed5ddd91a32353c1ab9  PLAY/Lead HQ/lib/presets.lua
+5f8a18d12bdab2af4877a5887fab6df42b2eb6d4  PLAY/Lead HQ/lib/jam.pd_linux
+b2c69fc17cf1e51112d7496b882dcfe3b6ad7070  PLAY/Lead HQ/lib/latch.lua
+509966df4bd1c46fc61497a658841e6a00d27c1f  PLAY/Lead HQ/lib/ogui.lua
+cc65e6cfab17bcac94edba1cf248ffc1c6b338a5  PLAY/Lead HQ/lib/progression.lua
+8bfc99bfa91019c761890aa5a61571a5adfdf104  PLAY/Lead HQ/patterns/B-Repeats.lua
+933c02e084538cc38c8dbebbcce6aeed835e2b94  PLAY/Lead HQ/patterns/L-Genny.lua
+40250d176c1a0eefde2e20d26491978838340f7e  PLAY/Lead HQ/patterns/G-UpDown.lua
+acc041f722340a89d0d0c9094aa0bdac0ab7ebf9  PLAY/Lead HQ/patterns/A-None.lua
+97d5833157cfcc790067bd875a14875d86c08533  PLAY/Lead HQ/patterns/H-Poly Rate.lua
+8a2436a8f3492dcf814958e58b0dd1e70caa2fd9  PLAY/Lead HQ/patterns/I-Wave.lua
+1c196838c8356ec90a143efea2bef0d50d0f1331  PLAY/Lead HQ/patterns/E-Cascade.lua
+9b097865e2604fd7ef4e57f7445b74f132837a6f  PLAY/Lead HQ/patterns/F-More Fast.lua
+672367ae86c844e7760509020663a29406a6853e  PLAY/Lead HQ/patterns/J-BounceBall.lua
+d5d0d3330c0fa6e1a551cd47e908dd07cc59924a  PLAY/Lead HQ/patterns/N-Sierpinski.lua
+79a282269fad1f6751bf465541df753ebe03f6bd  PLAY/Lead HQ/patterns/M-Stages.lua
+21b17d2883fb2885765e578a9b3de5dedd77a159  PLAY/Lead HQ/patterns/D-Cycle You.lua
+5d600b44ae6444ffb5e47832d1382784d3c1838a  PLAY/Lead HQ/patterns/C-Cycle Up.lua
+2f1ba002631216f5fe6fddd2804a13028b5c92ad  PLAY/Lead HQ/patterns/K-Phased.lua
+eb89e81ece32a0ee47f5201fdee67887af0f1ef0  PLAY/Lead HQ/main.pd
+c1d63b723a0308da50d965d92b00973b533bec94  PLAY/Flutetine/jam.lua
+4d65a501e2381d0aa20c00ac9a9af0e3b50e9f93  PLAY/Flutetine/mother.pd
+3336a6afc16d084dd64d5bac9e6eee1504cdc437  PLAY/Flutetine/README.md
+fa5b66cc24cbf100ff3527c940554fbbee89c51f  PLAY/Flutetine/fsynth.dsp
+9b51d3cb0ca1b8a17db2b5b7a2433e272c40d849  PLAY/Flutetine/compile.sh
+910eba06dfb9d4d040c7a018ce2b01c22ba30dca  PLAY/Flutetine/lib/organelle_track.lua
+2cfc3bdea24e0588e09fb94a85ab38704dff9b7e  PLAY/Flutetine/lib/sequencer.lua
+bb26e05f681e72f9672129715f04e2b6ccfbd27d  PLAY/Flutetine/lib/tick.pd
+9d9ee40438edbf8cd7e38814f133a74e7f7166fc  PLAY/Flutetine/lib/subjam.lua
+e7241c62f76e4cb45af6193903418815da8cf15c  PLAY/Flutetine/lib/utils.lua
+2a59ef7eeeea26086cec66c1401079ab31391e46  PLAY/Flutetine/lib/synthvoice.pd
+73e15df716692a5b2be85c44c29f821b92e11159  PLAY/Flutetine/lib/metro1.wav
+ac2aee2aedd6d5326f65a929f93195d72d2e7136  PLAY/Flutetine/lib/fsynth~.pd_linux
+79feb2009cc852e4eca62629214f31ca5d24f6e0  PLAY/Flutetine/lib/chord.lua
+c00ff76254c7fc5a67eb1ed5ddd91a32353c1ab9  PLAY/Flutetine/lib/presets.lua
+5f8a18d12bdab2af4877a5887fab6df42b2eb6d4  PLAY/Flutetine/lib/jam.pd_linux
+b2c69fc17cf1e51112d7496b882dcfe3b6ad7070  PLAY/Flutetine/lib/latch.lua
+509966df4bd1c46fc61497a658841e6a00d27c1f  PLAY/Flutetine/lib/ogui.lua
+cc65e6cfab17bcac94edba1cf248ffc1c6b338a5  PLAY/Flutetine/lib/progression.lua
+8bfc99bfa91019c761890aa5a61571a5adfdf104  PLAY/Flutetine/patterns/B-Repeats.lua
+933c02e084538cc38c8dbebbcce6aeed835e2b94  PLAY/Flutetine/patterns/L-Genny.lua
+40250d176c1a0eefde2e20d26491978838340f7e  PLAY/Flutetine/patterns/G-UpDown.lua
+acc041f722340a89d0d0c9094aa0bdac0ab7ebf9  PLAY/Flutetine/patterns/A-None.lua
+97d5833157cfcc790067bd875a14875d86c08533  PLAY/Flutetine/patterns/H-Poly Rate.lua
+8a2436a8f3492dcf814958e58b0dd1e70caa2fd9  PLAY/Flutetine/patterns/I-Wave.lua
+1c196838c8356ec90a143efea2bef0d50d0f1331  PLAY/Flutetine/patterns/E-Cascade.lua
+9b097865e2604fd7ef4e57f7445b74f132837a6f  PLAY/Flutetine/patterns/F-More Fast.lua
+672367ae86c844e7760509020663a29406a6853e  PLAY/Flutetine/patterns/J-BounceBall.lua
+d5d0d3330c0fa6e1a551cd47e908dd07cc59924a  PLAY/Flutetine/patterns/N-Sierpinski.lua
+79a282269fad1f6751bf465541df753ebe03f6bd  PLAY/Flutetine/patterns/M-Stages.lua
+21b17d2883fb2885765e578a9b3de5dedd77a159  PLAY/Flutetine/patterns/D-Cycle You.lua
+5d600b44ae6444ffb5e47832d1382784d3c1838a  PLAY/Flutetine/patterns/C-Cycle Up.lua
+2f1ba002631216f5fe6fddd2804a13028b5c92ad  PLAY/Flutetine/patterns/K-Phased.lua
+eb89e81ece32a0ee47f5201fdee67887af0f1ef0  PLAY/Flutetine/main.pd
