@@ -1,0 +1,83 @@
+#N canvas 0 25 1016 656 10;
+#X obj 72 113 inlet;
+#X obj 110 113 inlet;
+#X obj 45 414 select 0 1 2 3 4 5 6 7;
+#X obj 414 476 bng 25 250 50 0 empty empty empty 0 -6 0 10 -159808
+-1 -1;
+#X obj 385 476 bng 25 250 50 0 empty empty empty 0 -6 0 10 -232576
+-1 -1;
+#X obj 356 476 bng 25 250 50 0 empty empty empty 0 -6 0 10 -159808
+-1 -1;
+#X obj 327 476 bng 25 250 50 0 empty empty empty 0 -6 0 10 -232576
+-1 -1;
+#X obj 298 476 bng 25 250 50 0 empty empty empty 0 -6 0 10 -159808
+-1 -1;
+#X obj 269 476 bng 25 250 50 0 empty empty empty 0 -6 0 10 -232576
+-1 -1;
+#X obj 240 476 bng 25 250 50 0 empty empty empty 0 -6 0 10 -159808
+-1 -1;
+#X obj 211 476 bng 25 250 50 0 empty empty empty 0 -6 0 10 -232576
+-1 -1;
+#X obj 478 596 outlet;
+#X obj 431 596 outlet;
+#X obj 291 596 outlet;
+#X obj 196 597 outlet;
+#X obj 383 596 outlet;
+#X obj 337 595 outlet;
+#X obj 242 596 outlet;
+#X obj 145 598 outlet;
+#X obj 78 342 count 8;
+#X obj 311 438 hradio 15 1 0 2 empty empty empty 0 -6 0 8 -257985 -159808
+-1 0;
+#X obj 493 369 abs;
+#X obj 45 342 + 1;
+#X obj 493 343 - 2;
+#X obj 45 369 gate 2;
+#X obj 493 395 gate 2;
+#X obj 526 369 random 8;
+#X obj 311 360 loadbang;
+#X text 430 179 The Sequencer;
+#X text 402 195 Advanced Sequencer Module \, with selector for Random
+and Sequential mode. Both modes cycle through eight steps. GUI bangs
+have been used because they look good.;
+#X text 346 436 Random;
+#X text 246 436 Sequential;
+#X text 286 452 Mode Selector;
+#X text 533 346 Random mode select;
+#X text 20 324 Sequential mode select;
+#X text 498 564 Bang outputs;
+#X text 232 341 Bang the Sequential mode on load.;
+#X text 248 416 --|---The Sequencer---|--;
+#X obj 78 245 metro;
+#X text 453 300 comment;
+#X connect 0 0 38 0;
+#X connect 1 0 38 1;
+#X connect 2 0 10 0;
+#X connect 2 1 9 0;
+#X connect 2 2 8 0;
+#X connect 2 3 7 0;
+#X connect 2 4 6 0;
+#X connect 2 5 5 0;
+#X connect 2 6 4 0;
+#X connect 2 7 3 0;
+#X connect 3 0 11 0;
+#X connect 4 0 12 0;
+#X connect 5 0 15 0;
+#X connect 6 0 16 0;
+#X connect 7 0 13 0;
+#X connect 8 0 17 0;
+#X connect 9 0 14 0;
+#X connect 10 0 18 0;
+#X connect 19 0 24 1;
+#X connect 20 0 22 0;
+#X connect 20 0 23 0;
+#X connect 21 0 25 0;
+#X connect 22 0 24 0;
+#X connect 23 0 21 0;
+#X connect 24 0 2 0;
+#X connect 25 0 2 0;
+#X connect 26 0 25 1;
+#X connect 27 0 20 0;
+#X connect 38 0 19 0;
+#X connect 38 0 26 0;
+#X coords 0 -1 1 1 250 120 1 200 400;

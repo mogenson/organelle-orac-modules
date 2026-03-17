@@ -1,0 +1,40 @@
+#N canvas 0 25 1016 656 10;
+#X obj 160 447 bp~;
+#X obj 198 372 loadbang;
+#X obj 159 338 drumenv;
+#X obj 159 500 outlet~;
+#X obj 198 305 inlet;
+#X obj 36 152 noise~;
+#X text 83 13 Drum Sound Synthesis Module.;
+#X obj 36 261 *~ \$1;
+#X obj 83 262 *~ \$2;
+#X obj 82 177 osc~ \$3;
+#X obj 121 262 *~ \$4;
+#X obj 121 208 osc~ \$5;
+#X obj 159 262 *~ \$6;
+#X obj 159 234 phasor~ \$7;
+#X msg 167 402 \$8;
+#X msg 198 402 \$9;
+#X obj 159 473 *~ \$10;
+#X text 10 44 The first argument controls the signal level the noise
+source. The next six arguments are three pairs \, controlling the signal
+level and frequency of two sine-wave oscillators and a phasor (sawtooth-like
+oscillator). The inlet triggers the envelope by means of a bang. Argument
+8 controls the Filter Frequency. Argument 9 controls the Filter Q.
+Argument 10 controls the master level.;
+#X connect 0 0 16 0;
+#X connect 1 0 14 0;
+#X connect 1 0 15 0;
+#X connect 2 0 0 0;
+#X connect 4 0 2 1;
+#X connect 5 0 7 0;
+#X connect 7 0 2 0;
+#X connect 8 0 2 0;
+#X connect 9 0 8 0;
+#X connect 10 0 2 0;
+#X connect 11 0 10 0;
+#X connect 12 0 2 0;
+#X connect 13 0 12 0;
+#X connect 14 0 0 1;
+#X connect 15 0 0 2;
+#X connect 16 0 3 0;

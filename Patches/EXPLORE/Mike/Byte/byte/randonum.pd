@@ -1,0 +1,17 @@
+#N canvas 0 25 995 635 10;
+#X obj 255 360 + 20;
+#X obj 255 292 metro;
+#X obj 256 437 outlet;
+#X obj 285 263 inlet;
+#X obj 255 241 inlet;
+#X obj 255 323 random 1000;
+#X text 121 189 Random number generator. Numbers are in the range of
+20 to 1020 Left inlet for On/Off Toggle \, right inlet for speed and
+outler for nuber output.;
+#X obj 256 399 line 0 10;
+#X connect 0 0 7 0;
+#X connect 1 0 5 0;
+#X connect 3 0 1 1;
+#X connect 4 0 1 0;
+#X connect 5 0 0 0;
+#X connect 7 0 2 0;

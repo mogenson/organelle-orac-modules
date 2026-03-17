@@ -1,0 +1,88 @@
+#N canvas 0 25 1016 656 10;
+#X obj 16 37 route 0 1 2 3 4 5 6 7 8 9 10 11;
+#X obj 16 12 inlet;
+#X text 56 12 Whereit: Alternative Helpfile!;
+#X obj 99 627 print whereit;
+#X msg 15 391 --- \, Use the volume sliders wisely. \, The more things
+you have turned up the louder your overall sound gets. \, Do not use
+them at full volume unless you know what you are doing.;
+#X msg 15 332 --- \, The Pan Sliders direct the sound proportionally
+towards the left or right channel. \, If your stereo system is set
+properly this should be in the same direction you move the slider in.
+;
+#X msg 16 287 --- \, The Auxilliaries work like the ones on mixing
+desks. \, They are set to post-fader operation. \, Their job is to
+feed the effects with sound from the synthesis modules.;
+#X msg 16 202 --- \, The Lead and SuperDuperDrum require you to program
+steps before you can hear any sound. \, Observe the thingies that flash
+in a sequence. \, This is the same way the programming boxes are scanned.
+\, Whenever the sequencer scans a checked box you will hear the sound
+you have just programmed. \, Unchekced boxes are simply ignored.;
+#X msg 16 168 --- \, Turn any of the green volume sliders on the Interface
+up. \, You should start hearing some sound.;
+#X msg 16 109 --- \, The Synthesizer loads with a preset tempo value
+of 350 \, This is moderate speed. \, Click on the Sequencer On/Off
+box to start the sequencing. \, This only starts the sequencer. \,
+It does not generate sound.;
+#X msg 15 437 --- \, In Lead and SuperDuperDrum the flashing thigies
+are called bangs. \, They are interactive. \, Click on any of them
+to trigger/bang all the sounds that are checked for the step you click
+on.;
+#X msg 15 496 --- \, The Digital Delay repeats delayed copies of the
+sound it receives. \, You can control how often the repeats occur with
+the Time slider. \, You can control how many repeats occur with the
+FB/Feedback slider. \, Maximum Feedback means infinite repeats. \,
+Warning: Self-Oscillation can occur from maximum feedback! \, Self-Oscillation
+means the output gets louder and louder. \,;
+#X msg 423 133 --- \, The Stereo Reverb simulates the reflections of
+sound in large spaces with reflective surfaces. \, You can control
+the size of the space with the Room Size slider. \, The Damping slider
+controls the reflection factor of the surfaces. \, Stereo Width controls
+the stereo image of the reverb. \, Stereo Width is usually kept at
+maximum.;
+#X msg 422 217 --- \, The Audio On/Audio Mute on the Interface only
+applies to Audio from the Interface. \, You will understand why it
+is useful once you start using the Interface.;
+#X msg 423 262 --- \, The Sequencers have a mode selector switch. \,
+Sequential mode is selected by default. \, Sequential mode cycles through
+the steps in increments of one. \, Random mode cycles randomly through
+the steps.;
+#X text 422 425 These messages can be banged from the GUI. The purpose
+is to creaty an easy-to-use interface which will help the users in
+learning about this program.;
+#X msg 16 77 --- \, Howdy. This here is the Weird Synthesizer for Weird
+People \, Copyright (C) 2007 Created by Jesus H.;
+#X msg 423 321 --- \, Thank you for using Weird Synthesizer for Weird
+People. \, This is an open source project. \, Please feel free to modify
+it or distribute it under the terms of version 3 of the GNU General
+Public License as published by the Free Software Foundation. \, Contact
+Jesus H. on ppsycho@mailcity.com with any comments or suggestions.
+\, Log on to http://iforgotthem.tripod.com for the latest news and
+related downloads.;
+#X connect 0 0 16 0;
+#X connect 0 0 17 0;
+#X connect 0 1 9 0;
+#X connect 0 2 8 0;
+#X connect 0 3 7 0;
+#X connect 0 4 6 0;
+#X connect 0 5 5 0;
+#X connect 0 6 4 0;
+#X connect 0 7 10 0;
+#X connect 0 8 11 0;
+#X connect 0 9 12 0;
+#X connect 0 10 13 0;
+#X connect 0 11 14 0;
+#X connect 1 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X connect 10 0 3 0;
+#X connect 11 0 3 0;
+#X connect 12 0 3 0;
+#X connect 13 0 3 0;
+#X connect 14 0 3 0;
+#X connect 16 0 3 0;
+#X connect 17 0 3 0;

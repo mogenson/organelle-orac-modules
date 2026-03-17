@@ -1,0 +1,36 @@
+#N canvas 0 25 1016 656 10;
+#X obj 26 24 inlet~;
+#X obj 74 222 delwrite~ \$0_dl 5000;
+#X obj 67 108 delread~ \$0_dl 50;
+#X obj 67 84 \$1;
+#X obj 67 56 loadbang;
+#X obj 26 258 outlet~;
+#X obj 26 142 hip~ 5;
+#X obj 73 199 *~ 0.5;
+#X obj 86 142 \$2;
+#X text 266 25 feedback delay line capable of handling up to 5 seconds.
+inputs are signal \, delay time (ms) \, and feedback amount (which
+defaults to 0.5) -jason plumb;
+#X obj 105 25 inlet;
+#X obj 166 24 inlet;
+#X text 28 8 audio;
+#X text 90 9 delay(ms);
+#X text 168 10 feedback;
+#X obj 26 222 *~ 0.5;
+#X text 270 110 Interesting Delay Line patch from Jason Plumb. I made
+it a bit more efficient by removing unnecessary stuff such as number
+boxes between connections and changed the output control to a multiplication.
+Jason Plumb had originally used a division but multiplications are
+always preferred in computer programming. -Jesus H.;
+#X connect 0 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 0 8 0;
+#X connect 6 0 7 0;
+#X connect 6 0 15 0;
+#X connect 7 0 1 0;
+#X connect 8 0 7 1;
+#X connect 10 0 2 0;
+#X connect 11 0 7 1;
+#X connect 15 0 5 0;

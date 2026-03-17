@@ -1,0 +1,18 @@
+#N canvas 0 25 1016 656 10;
+#X obj 264 126 abs;
+#X obj 264 100 - 2;
+#X obj 242 163 gate 2;
+#X obj 229 290 outlet;
+#X obj 40 41 inlet;
+#X obj 271 47 inlet;
+#X text 50 19 Bang/Message Inlet;
+#X text 194 28 Toggle/Switch Inlet (0 or 1);
+#X text 229 309 Output;
+#X text 294 227 This is a module to control the matrix with a bang
+sequencer like The Sequencer. It functions as a gate controlled by
+a 0 or 1 message in the input.;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 4 0 2 1;
+#X connect 5 0 1 0;

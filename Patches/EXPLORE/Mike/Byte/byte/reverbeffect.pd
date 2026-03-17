@@ -1,0 +1,91 @@
+#N canvas 0 25 1016 656 10;
+#X obj -4 583 freeverb~;
+#X obj 46 609 outlet~;
+#X obj -3 609 outlet~;
+#X msg 370 500 damping \$1;
+#X msg 370 521 width \$1;
+#X msg 370 479 roomsize \$1;
+#X obj -36 487 *~;
+#X obj 139 489 *~;
+#X obj 100 487 *~;
+#X obj 0 488 *~;
+#X obj 176 489 *~;
+#X obj 36 488 *~;
+#X obj -35 48 inlet~;
+#X obj 8 48 inlet~;
+#X obj 52 48 inlet~;
+#X obj 95 48 inlet~;
+#X obj 139 48 inlet~;
+#X obj 182 48 inlet~;
+#X obj 314 133 vsl 15 128 0 1 0 0 empty empty empty 0 -8 0 10 -99865
+-4032 -1 0 1;
+#X obj 343 133 vsl 15 128 0 1 0 0 empty empty empty 0 -8 0 10 -86277
+-232576 -1 0 1;
+#X obj 373 133 vsl 15 128 0 1 0 0 empty empty empty 0 -8 0 10 -16662
+-257985 -1 0 1;
+#X text 315 279 Aux. Levels;
+#X text 316 264 1;
+#X text 344 263 2;
+#X text 375 263 3;
+#X text 265 111 Stereo Reverb;
+#X msg 577 301 print;
+#X obj 223 131 hsl 65 15 0 1 0 0 empty empty empty -2 -6 0 10 -4160
+-261682 -1 5440 1;
+#X obj 224 249 hsl 65 15 0 1 0 0 empty empty empty -2 -6 0 10 -258113
+-257985 -1 6400 1;
+#X obj 223 189 hsl 65 15 0 2 0 0 empty empty empty -2 -6 0 10 -260097
+-204800 -1 1600 1;
+#X obj 309 21 loadbang;
+#X msg 281 40 0.85;
+#X msg 315 40 0.5;
+#X msg 343 40 1;
+#X text 228 143 Room Size;
+#X text 232 201 Damping;
+#X text 218 263 Stereo Width;
+#X text 376 26 Bang the default values on the sliders on load.;
+#X text 389 457 Control the reverb parameters;
+#X text -35 28 Auxilliary inputs (like on a mixing desk).;
+#X text -2 627 Left and Right signal outputs;
+#X text 427 127 FreeVerb. Reverb. Adds the feeling of a big space reflecting
+the sound.;
+#X text 620 299 <---Click here!;
+#X text 559 329 Some people might be interested in knowing the exact
+values of the sliders that control the reverb parameters. I don't know
+why anybody would like to know that \, but just in case \, here it
+is.;
+#X text 530 277 Display the current parameter values on the PD window.
+;
+#X connect 0 0 2 0;
+#X connect 0 1 1 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 0;
+#X connect 7 0 0 1;
+#X connect 8 0 0 1;
+#X connect 9 0 0 0;
+#X connect 10 0 0 1;
+#X connect 11 0 0 0;
+#X connect 12 0 6 0;
+#X connect 13 0 8 0;
+#X connect 14 0 9 0;
+#X connect 15 0 7 0;
+#X connect 16 0 11 0;
+#X connect 17 0 10 0;
+#X connect 18 0 6 1;
+#X connect 18 0 8 1;
+#X connect 19 0 9 1;
+#X connect 19 0 7 1;
+#X connect 20 0 11 1;
+#X connect 20 0 10 1;
+#X connect 26 0 0 0;
+#X connect 27 0 5 0;
+#X connect 28 0 4 0;
+#X connect 29 0 3 0;
+#X connect 30 0 31 0;
+#X connect 30 0 32 0;
+#X connect 30 0 33 0;
+#X connect 31 0 27 0;
+#X connect 32 0 29 0;
+#X connect 33 0 28 0;
+#X coords 0 -1 1 1 200 200 1 200 100;
