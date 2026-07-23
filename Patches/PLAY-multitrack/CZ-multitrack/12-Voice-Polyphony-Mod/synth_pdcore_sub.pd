@@ -1,0 +1,12 @@
+#N canvas 180 100 620 420 10;
+#X obj 24 28 declare -path lib;
+#X text 34 9 pd~ subprocess for PLAY multitrack synth voices. Receives synthnote and synthparams messages from the host. Four synthvoice instances run here; audio returns through dac~ to the host pd~ outlets.;
+#X obj 35 55 loadbang;
+#X msg 35 85 \; pd dsp 1;
+#X obj 85 145 r synthnote;
+#X obj 85 205 clone -s 1 synthvoice 6;
+#X obj 85 285 dac~ 1 2;
+#X connect 2 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 1 6 1;
